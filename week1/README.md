@@ -17,6 +17,7 @@ Checkout a branch with the following naming convention: first character of your 
 ```console
 cd MA5112/
 git checkout -b <your name>
+git push -u origin <your name>
 ```
 
 You will now have a copy of the `main` branch to work on for the tutorial. Each week, I will release new materials on the `main` branch. You can work on your own branch and incorporate these new additions using the following commands:
