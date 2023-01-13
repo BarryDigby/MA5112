@@ -76,7 +76,7 @@ trim_galore --help
 
 ## Quality Control
 
-Use `FastQC` and to perform quality control checks on each of the fastq files under `data/`. The expected outputs are a `*.html` and `*.zip` file per fastq file analysed.
+Use `FastQC` to perform quality control checks on each of the fastq files under `data/`. The expected outputs are a `*.html` and `*.zip` file per fastq file analysed.
 
 - Check `fastqc --help` to view the expected inputs and flags.
 
@@ -84,14 +84,13 @@ Use `FastQC` and to perform quality control checks on each of the fastq files un
 
 Once this is done, run `multiqc .` in the directory with the `FastQC` outputs to consolidate them into a single HTML report `multiqc_report.html`.
 
-***
-
 We will inspect the output of the sequencing reports together during the tutorial.
 
 ## Adapter/Read Trimming
 
-## ![nextera](../docs/images/nextera.png)
+ ![nextera](../docs/images/nextera.png)
 
+***
 
 Perform adapter trimming on the raw sequencing data using `trim_galore`. To apply the suggestions from the supplier, use the following flags:
 
@@ -109,7 +108,99 @@ Perform adapter trimming on the raw sequencing data using `trim_galore`. To appl
 
 ***
 
-Re-use your code from the `Quality Control` step to generate reports of the trimmed data.
+Again, use a for loop to execute this on all fastq files in an efficient manner.
 
+Re-use your code from the `Quality Control` step to generate reports of the **trimmed data**.
 
+# Reproducible Analyses
 
+In bioinformatics, `GitHub` is typically used to store code used for analyses. Over the past few years it has become increasingly common to store files capable of recapitulating the compute environment used at the time of analysis for 100% reproducibility (software versions etc are frozen).
+
+## Conda `.yml` files
+
+We can capture the commands used to create our conda environment using a `.yml` file:
+
+> NB: Indentation is important for yaml files
+
+Save the below information in a file called `environment.yml`:
+
+```yaml
+name: week1
+channels:
+  - bioconda
+dependencies:
+  - fastqc
+  - multiqc
+  - trim-galore
+```
+
+To re-create our week1 env on a different computer, run `conda env create -f environment.yml`.
+
+You can request specific versions of tools by 'pinning' versions like so: `multiqc==1.14`. Be careful doing this, often there will be package conflicts that will take years off your life. In the `.yml` file given, no package versions are pinned thus Anaconda will find versions that run on (for example) the same version of python (2.7.18).
+
+## Packing environments in containers
+
+Using `Docker`, we will use a minimal image from `nf-core` that comes pre-packaged with `conda`. The idea here is to create a minimal container holding our `week1` environment for portable execution.
+
+- Go to Docker Hub and create a repository called `week1`
+
+- Save the below information locally in a file called `Dockerfile`:
+
+```Dockerfile
+FROM nfcore/base:1.14
+
+COPY environment.yml /
+RUN conda env create -f /environment.yml
+
+ENV PATH /opt/conda/envs/week1/bin/:$PATH
+```
+
+If you havent already, under `week1`, create a directory called `container`. Move the `Dockerfile` and `environment.yml` file there.
+
+> N.B: substitute `$username` for your Docker Hub username
+
+```console
+cd container/
+docker build $username/week1 .
+docker push -t $username/week1
+```
+
+The container is now pushed to your Dockerhub account. You can pull the container from any computer with docker using `docker pull $username/week1`.
+
+# Advanced
+
+Write a bash script capable of performing:
+
+- Adapter/Read trimming.
+
+- FastQC of trimmed reads.
+
+- MultiQC of trimmed FastQC reports.
+
+Execute this bash script inside the Docker container.
+
+### Shelling into Docker containers
+
+To access the tools inside a docker container, use the interactive (`-it`) `run` command:
+
+```console
+docker run -it $username/week1
+```
+
+From here you can check if the tools were installed correctly (`fastqc --help`, `multiqc --help`, `trim_galore --help`).
+
+Exit the container by typing `exit`.
+
+### Docker volumes
+
+Load the fastq files under `data/` into the container using the `--volume / -v` parameter:
+
+```console
+docker run -it -v /MA5112/week1/data/:/files/ $username/week1
+```
+
+The fastq files have been staged in the container under the directory `files/`.
+
+***
+
+Good luck
