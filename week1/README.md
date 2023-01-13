@@ -6,6 +6,8 @@ Following quality control assessment, install `TrimGalore!` to perform adapter t
 
 ## Git housekeeping
 
+### :warning: Do not try to push files larger than 20MB to GitHub :warning:
+
 Make a clone of the GitHub repository `BarryDigby/MA5112` locally on your laptop:
 
 ```console
@@ -115,7 +117,7 @@ Re-use your code from the `Quality Control` step to generate reports of the **tr
 
 # Reproducible Analyses
 
-In bioinformatics, `GitHub` is typically used to store code used for analyses. Over the past few years it has become increasingly common to store files capable of recapitulating the compute environment used at the time of analysis for 100% reproducibility (software versions etc are frozen).
+In bioinformatics, GitHub is typically used to store code used for analyses. Over the past few years it has become increasingly common to store files capable of recapitulating the compute environment used at the time of analysis for 100% reproducibility (software versions etc are frozen).
 
 ## Conda `.yml` files
 
@@ -141,7 +143,7 @@ You can request specific versions of tools by 'pinning' versions like so: `multi
 
 ## Packing environments in containers
 
-Using `Docker`, we will use a minimal image from `nf-core` that comes pre-packaged with `conda`. The idea here is to create a minimal container holding our `week1` environment for portable execution.
+Using `Docker`, we will use a minimal image from `nf-core` that comes pre-packaged with `conda`. The idea here is to create a container holding our `week1` environment for portable execution.
 
 - Go to Docker Hub and create a repository called `week1`
 
@@ -194,13 +196,13 @@ Exit the container by typing `exit`.
 
 ### Docker volumes
 
-Load the fastq files under `data/` into the container using the `--volume / -v` parameter:
+We can load this weeks tutorial into the container using the `--volume / -v` parameter:
 
 ```console
-docker run -it -v /MA5112/week1/data/:/files/ $username/week1
+docker run -it -v /MA5112/week1/:/files/ $username/week1
 ```
 
-The fastq files have been staged in the container under the directory `files/`.
+You can now view all tutorial files: `ls -la files/`. Make sure your bash script is in the directory!
 
 ***
 
