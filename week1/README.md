@@ -164,8 +164,8 @@ If you havent already, under `week1`, create a directory called `container`. Mov
 
 ```console
 cd container/
-docker build $username/week1 .
-docker push -t $username/week1
+docker build -t $username/week1 .
+docker push $username/week1
 ```
 
 The container is now pushed to your Dockerhub account. You can pull the container from any computer with docker using `docker pull $username/week1`.
