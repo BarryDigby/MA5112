@@ -66,19 +66,50 @@ Install the tools required for the practical:
 conda install -c bioconda fastqc multiqc trim-galore
 ```
 
-## 
+Test that each tool was installed:
 
-`fastqc --help`
+```console
+fastqc --help
+multiqc --help
+trim_galore --help
+```
 
-`multiqc --help`
+## Quality Control
 
-`trim_galore --help`
+Use `FastQC` and to perform quality control checks on each of the fastq files under `data/`. The expected outputs are a `*.html` and `*.zip` file per fastq file analysed.
 
-`for file in data/* ; do trim_galore --cores 2 --adapter TGGAATTCTCGGGTGCCAAGG --length 17 --clip_r1 4 --three_prime_clip_r1 4 --max_length 40 --gzip $file; done`
+- Check `fastqc --help` to view the expected inputs and flags.
 
-`for file in data/*; do fastqc $file --outdir qc/; done`
+- Execute `fastqc` over all fastq files in `data/` using a for loop.
+
+Once this is done, run `multiqc .` in the directory with the `FastQC` outputs to consolidate them into a single HTML report `multiqc_report.html`.
+
+***
+
+We will inspect the output of the sequencing reports together during the tutorial.
+
+## Adapter/Read Trimming
+
+## ![nextera](../docs/images/nextera.png)
 
 
+Perform adapter trimming on the raw sequencing data using `trim_galore`. To apply the suggestions from the supplier, use the following flags:
+
+- `--adapter TGGAATTCTCGGGTGCCAAGG`: Specific adapter sequence to trim from the reads
+
+- `--length 17`: Remaining reads must be of length 17. miRNA reads are within 17-25 in length
+
+- `--clip_r1 4`: Remove the first 4 bases from the 5 prime end of R1.
+
+- `-three_prime_clip_r1 4`: Remove the last 4 bases from the 3 prime end of R1.
+
+- `--max_length 30`: Reject reads greater then length 30 after applying trimming.
+
+- `--gzip`: Compress the output fastq file
+
+***
+
+Re-use your code from the `Quality Control` step to generate reports of the trimmed data.
 
 
 
