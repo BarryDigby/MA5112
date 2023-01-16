@@ -103,7 +103,7 @@ Perform adapter trimming on the raw sequencing data using `trim_galore`. To appl
 
 - `--clip_r1 4`: Remove the first 4 bases from the 5 prime end of R1.
 
-- `-three_prime_clip_r1 4`: Remove the last 4 bases from the 3 prime end of R1.
+- `--three_prime_clip_r1 4`: Remove the last 4 bases from the 3 prime end of R1.
 
 - `--max_length 30`: Reject reads greater then length 30 after applying trimming.
 
@@ -256,9 +256,9 @@ multiqc quality_control/trimmed -n trimmed_reads -o quality_control
 Shell into your docker container interactively (change to your username). We need to mount the files to the container using `-v`:
 
 ```bash
-cd MA5112
+cd MA5112/week1
 docker run -it -v $(pwd):/files/ barryd237/week1
-cd week1
+cd files/
 bash week1_script.sh /files/data
 ```
 
