@@ -207,3 +207,58 @@ You can now view all tutorial files: `ls -la files/`. Make sure your bash script
 ***
 
 Good luck
+
+# Solution
+
+Copy and save the bash script below as `week1_script.sh`:
+
+```bash
+#!/usr/bin/env bash 
+
+# set path to analysis files
+DATA=$1
+
+# 1. Perform QC on raw data
+
+mkdir -p quality_control
+mkdir -p quality_control/raw
+
+for file in ${DATA}/*; do
+    fastqc $file \
+        --outdir quality_control/raw
+done
+
+multiqc quality_control/raw -n raw_reads -o quality_control
+
+# 2. Trim and QC
+
+mkdir -p quality_control/trimmed
+
+for file in ${DATA}/*; do
+
+    trim_galore \
+        --adapter TGGAATTCTCGGGTGCCAAGG \
+        --length 17 \
+        --clip_r1 4 \
+        --three_prime_clip_r1 4 \
+        --max_length 30 \
+        --gzip \
+        --fastqc \
+        --fastqc_args "--outdir quality_control/trimmed" \
+        --outdir quality_control/trimmed \
+        $file
+
+done
+
+multiqc quality_control/trimmed -n trimmed_reads -o quality_control
+```
+
+Shell into your docker container interactively (change to your username). We need to mount the files to the container using `-v`:
+
+```bash
+cd MA5112
+docker run -it -v $(pwd):/files/ barryd237/week1
+cd week1
+bash week1_script.sh /files/data
+```
+
