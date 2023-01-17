@@ -26,6 +26,12 @@ Run the below to stage your commits (your work last friday) and publish them to 
 
 ```console
 cd MA5112/
+git branch
+```
+
+Make sure you are on your branch and not `main` (run `git checkout -b <your branch name>` if needed)
+
+```console
 git add . 
 git commit -m "my first commit"
 git push -u origin <your branch name>
