@@ -11,21 +11,21 @@ Following quality control assessment, install `TrimGalore!` to perform adapter t
 Make a clone of the GitHub repository `BarryDigby/MA5112` locally on your laptop:
 
 ```console
-git clone git@github.com:BarryDigby/MA5112.git
+git clone https://github.com/BarryDigby/MA5112.git
 ```
 
 Checkout a branch with the following naming convention: first character of your first name + surname. (e.g Barry Digby = bdigby )
 
 ```console
 cd MA5112/
-git checkout -b <your name>
-git push -u origin <your name>
+git checkout -b <your branch name>
+git push -u origin <your branch name>
 ```
 
 You will now have a copy of the `main` branch to work on for the tutorial. Each week, I will release new materials on the `main` branch. You can work on your own branch and incorporate these new additions using the following commands:
 
 ```console
-git pull origin/main
+git pull origin main
 ```
 
 This command essentially means "download the latest materials from the `main` branch to my branch". You will get the following error the first time you run this:
