@@ -39,7 +39,7 @@ git push -u origin <your branch name>
 
 ### Troubleshooting
 
-When running `git ull origin main` in the future you are likely to encounter this:
+When running `git pull origin main` in the future you are likely to encounter this:
 
 ```console
 From github.com:BarryDigby/MA5112
