@@ -261,4 +261,3 @@ docker run -it -v $(pwd):/files/ barryd237/week1
 cd files/
 bash week1_script.sh /files/data
 ```
-
