@@ -1,0 +1,7 @@
+name: week2
+channels:
+ - bioconda
+dependencies:
+ - bwa
+ - gatk4
+ - samtools
