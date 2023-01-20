@@ -1,0 +1,7 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	C9-N2-R1_S8_L001_R1_001	/home/liamporter/github/MA5112/week1/data/C9-N2-R1_S8_L001_R1_001_fastqc.zip
+FastQC	all_sections	Ctl-N1-R1_S1_L001_R1_001	/home/liamporter/github/MA5112/week1/data/Ctl-N1-R1_S1_L001_R1_001_fastqc.zip
+FastQC	all_sections	C9-N1-R1_S7_L001_R1_001	/home/liamporter/github/MA5112/week1/data/C9-N1-R1_S7_L001_R1_001_fastqc.zip
+FastQC	all_sections	C9-N3-R1_S9_L001_R1_001	/home/liamporter/github/MA5112/week1/data/C9-N3-R1_S9_L001_R1_001_fastqc.zip
+FastQC	all_sections	Ctl-N2-R1_S2_L001_R1_001	/home/liamporter/github/MA5112/week1/data/Ctl-N2-R1_S2_L001_R1_001_fastqc.zip
+FastQC	all_sections	Ctl-N3-R1_S3_L001_R1_001	/home/liamporter/github/MA5112/week1/data/Ctl-N3-R1_S3_L001_R1_001_fastqc.zip

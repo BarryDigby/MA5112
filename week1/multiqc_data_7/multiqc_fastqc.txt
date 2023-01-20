@@ -1,0 +1,7 @@
+Sample	Filename	File type	Encoding	Total Sequences	Sequences flagged as poor quality	Sequence length	%GC	total_deduplicated_percentage	basic_statistics	per_base_sequence_content	per_sequence_gc_content	per_base_n_content	sequence_length_distribution	sequence_duplication_levels	overrepresented_sequences	adapter_content
+C9-N1-R1_S7_L001_R1_001	C9-N1-R1_S7_L001_R1_001_fastqc.zip_trimmed.fq.gz	null	Illumina 1.5	0.0	0.0	0.0	0.0	100.0	pass	pass	pass	pass	pass	pass	pass	warn
+C9-N2-R1_S8_L001_R1_001	C9-N2-R1_S8_L001_R1_001_fastqc.zip_trimmed.fq.gz	null	Illumina 1.5	0.0	0.0	0.0	0.0	100.0	pass	pass	pass	pass	pass	pass	pass	warn
+C9-N3-R1_S9_L001_R1_001	C9-N3-R1_S9_L001_R1_001_fastqc.zip_trimmed.fq.gz	null	Illumina 1.5	0.0	0.0	0.0	0.0	100.0	pass	pass	pass	pass	pass	pass	pass	warn
+Ctl-N1-R1_S1_L001_R1_001	Ctl-N1-R1_S1_L001_R1_001_fastqc.html_trimmed.fq.gz	null	Illumina 1.5	0.0	0.0	0.0	0.0	100.0	pass	pass	pass	pass	pass	pass	pass	warn
+Ctl-N2-R1_S2_L001_R1_001	Ctl-N2-R1_S2_L001_R1_001_fastqc.zip_trimmed.fq.gz	null	Illumina 1.5	0.0	0.0	0.0	0.0	100.0	pass	pass	pass	pass	pass	pass	pass	warn
+Ctl-N3-R1_S3_L001_R1_001	Ctl-N3-R1_S3_L001_R1_001_fastqc.zip_trimmed.fq.gz	null	Illumina 1.5	0.0	0.0	0.0	0.0	100.0	pass	pass	pass	pass	pass	pass	pass	warn

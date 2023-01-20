@@ -1,0 +1,7 @@
+Sample	Cutadapt_mqc-generalstats-cutadapt-percent_trimmed	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-median_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
+C9-N1-R1_S7_L001_R1_001	5.6827040281203045	0.0	0.0	0	0	0.0	0.0
+C9-N2-R1_S8_L001_R1_001	4.691390546850754	0.0	0.0	0	0	0.0	0.0
+C9-N3-R1_S9_L001_R1_001	4.154414183277416	0.0	0.0	0	0	0.0	0.0
+Ctl-N1-R1_S1_L001_R1_001	12.790231103037641	0.0	0.0	0	0	0.0	0.0
+Ctl-N2-R1_S2_L001_R1_001	3.1534705216880754	0.0	0.0	0	0	0.0	0.0
+Ctl-N3-R1_S3_L001_R1_001	8.549003510472216	0.0	0.0	0	0	0.0	0.0

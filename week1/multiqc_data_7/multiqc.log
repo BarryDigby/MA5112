@@ -1,0 +1,50 @@
+[2023-01-13 15:41:40,955] multiqc                                            [DEBUG  ]  This is MultiQC v1.14
+[2023-01-13 15:41:40,956] multiqc                                            [DEBUG  ]  Command used: /home/liamporter/miniconda3/envs/week1/bin/multiqc .
+[2023-01-13 15:41:41,264] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.14
+[2023-01-13 15:41:41,264] multiqc                                            [DEBUG  ]  Working dir : /home/liamporter/github/MA5112/week1
+[2023-01-13 15:41:41,264] multiqc                                            [DEBUG  ]  Template    : default
+[2023-01-13 15:41:41,264] multiqc                                            [DEBUG  ]  Running Python 3.7.12 | packaged by conda-forge | (default, Oct 26 2021, 06:08:53)  [GCC 9.4.0]
+[2023-01-13 15:41:41,265] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, lima, peddy, somalier, methylQA, mosdepth, phantompeakqualtools, qualimap, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, biobambam2, jcvi, mtnucratio, picard, vep, sentieon, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umitools, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, cellranger, snpsplit, odgi, pangolin, nextclade, humid, kat, leehom, adapterRemoval, bbduk, clipandmerge, cutadapt, flexbar, kaiju, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap
+[2023-01-13 15:41:41,265] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmp2dhi3vks
+[2023-01-13 15:41:41,344] multiqc                                            [INFO   ]  Search path : /home/liamporter/github/MA5112/week1
+[2023-01-13 15:41:42,153] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_module_specific_max_filesize: 271] // [skipped_no_match: 94] // [skipped_ignore_pattern: 31] // [skipped_directory_fn_ignore_dirs: 1]
+[2023-01-13 15:41:42,259] multiqc.plots.bargraph                             [DEBUG  ]  Using matplotlib version 3.4.3
+[2023-01-13 15:41:42,260] multiqc.plots.linegraph                            [DEBUG  ]  Using matplotlib version 3.4.3
+[2023-01-13 15:41:42,260] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2023-01-13 15:41:42,262] multiqc                                            [DEBUG  ]  No samples found: snippy
+[2023-01-13 15:41:42,269] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 6 reports
+[2023-01-13 15:41:42,282] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: C9-N1-R1_S7_L001_R1_001
+[2023-01-13 15:41:42,283] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Ctl-N1-R1_S1_L001_R1_001
+[2023-01-13 15:41:42,285] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: C9-N1-R1_S7_L001_R1_001
+[2023-01-13 15:41:42,285] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Ctl-N2-R1_S2_L001_R1_001
+[2023-01-13 15:41:42,287] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Ctl-N3-R1_S3_L001_R1_001
+[2023-01-13 15:41:42,290] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Ctl-N2-R1_S2_L001_R1_001
+[2023-01-13 15:41:42,290] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: C9-N3-R1_S9_L001_R1_001
+[2023-01-13 15:41:42,290] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: C9-N2-R1_S8_L001_R1_001
+[2023-01-13 15:41:42,292] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Ctl-N1-R1_S1_L001_R1_001
+[2023-01-13 15:41:42,293] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: C9-N2-R1_S8_L001_R1_001
+[2023-01-13 15:41:42,293] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: C9-N3-R1_S9_L001_R1_001
+[2023-01-13 15:41:42,293] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Duplicate sample name found! Overwriting: Ctl-N3-R1_S3_L001_R1_001
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'C9-N2-R1_S8_L001_R1_001_fastqc.zip' as already parsed 'C9-N2-R1_S8_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Ctl-N1-R1_S1_L001_R1_001_fastqc.zip' as already parsed 'Ctl-N1-R1_S1_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'C9-N1-R1_S7_L001_R1_001_fastqc.zip' as already parsed 'C9-N1-R1_S7_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'C9-N3-R1_S9_L001_R1_001_fastqc.zip' as already parsed 'C9-N3-R1_S9_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Ctl-N2-R1_S2_L001_R1_001_fastqc.zip' as already parsed 'Ctl-N2-R1_S2_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  Skipping 'Ctl-N3-R1_S3_L001_R1_001_fastqc.zip' as already parsed 'Ctl-N3-R1_S3_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [WARNING]  Sample had zero reads: 'C9-N2-R1_S8_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [WARNING]  Sample had zero reads: 'Ctl-N3-R1_S3_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [WARNING]  Sample had zero reads: 'C9-N1-R1_S7_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [WARNING]  Sample had zero reads: 'Ctl-N1-R1_S1_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [WARNING]  Sample had zero reads: 'Ctl-N2-R1_S2_L001_R1_001'
+[2023-01-13 15:41:42,294] multiqc.modules.fastqc.fastqc                      [WARNING]  Sample had zero reads: 'C9-N3-R1_S9_L001_R1_001'
+[2023-01-13 15:41:42,295] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  sequence_quality not found in FastQC reports
+[2023-01-13 15:41:42,295] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  per_seq_quality not found in FastQC reports
+[2023-01-13 15:41:42,302] multiqc.modules.fastqc.fastqc                      [DEBUG  ]  adapter_content not found in FastQC reports
+[2023-01-13 15:41:42,309] multiqc                                            [INFO   ]  Compressing plot data
+[2023-01-13 15:41:42,328] multiqc                                            [WARNING]  Previous MultiQC output found! Adjusting filenames..
+[2023-01-13 15:41:42,329] multiqc                                            [WARNING]  Use -f or --force to overwrite existing reports instead
+[2023-01-13 15:41:42,329] multiqc                                            [INFO   ]  Report      : multiqc_report_7.html
+[2023-01-13 15:41:42,329] multiqc                                            [INFO   ]  Data        : multiqc_data_7
+[2023-01-13 15:41:42,329] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp2dhi3vks/multiqc_data' to '/home/liamporter/github/MA5112/week1/multiqc_data_7'
+[2023-01-13 15:41:42,376] multiqc                                            [INFO   ]  MultiQC complete

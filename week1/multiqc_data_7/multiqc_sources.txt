@@ -1,0 +1,14 @@
+Module	Section	Sample Name	Source
+Snippy	snippy	multiqc	/home/liamporter/github/MA5112/week1/multiqc_data_4/multiqc.log
+Cutadapt	all_sections	Ctl-N1-R1_S1_L001_R1_001	/home/liamporter/github/MA5112/week1/Ctl-N1-R1_S1_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	C9-N2-R1_S8_L001_R1_001	/home/liamporter/github/MA5112/week1/C9-N2-R1_S8_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	Ctl-N2-R1_S2_L001_R1_001	/home/liamporter/github/MA5112/week1/Ctl-N2-R1_S2_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	C9-N3-R1_S9_L001_R1_001	/home/liamporter/github/MA5112/week1/C9-N3-R1_S9_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	Ctl-N3-R1_S3_L001_R1_001	/home/liamporter/github/MA5112/week1/Ctl-N3-R1_S3_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	C9-N1-R1_S7_L001_R1_001	/home/liamporter/github/MA5112/week1/C9-N1-R1_S7_L001_R1_001.fastq_trimming_report.txt
+FastQC	all_sections	C9-N2-R1_S8_L001_R1_001	/home/liamporter/github/MA5112/week1/C9-N2-R1_S8_L001_R1_001_fastqc.zip_trimmed_fastqc.zip
+FastQC	all_sections	Ctl-N3-R1_S3_L001_R1_001	/home/liamporter/github/MA5112/week1/Ctl-N3-R1_S3_L001_R1_001_fastqc.zip_trimmed_fastqc.zip
+FastQC	all_sections	C9-N1-R1_S7_L001_R1_001	/home/liamporter/github/MA5112/week1/C9-N1-R1_S7_L001_R1_001_fastqc.zip_trimmed_fastqc.zip
+FastQC	all_sections	Ctl-N1-R1_S1_L001_R1_001	/home/liamporter/github/MA5112/week1/Ctl-N1-R1_S1_L001_R1_001_fastqc.html_trimmed_fastqc.zip
+FastQC	all_sections	Ctl-N2-R1_S2_L001_R1_001	/home/liamporter/github/MA5112/week1/Ctl-N2-R1_S2_L001_R1_001_fastqc.zip_trimmed_fastqc.zip
+FastQC	all_sections	C9-N3-R1_S9_L001_R1_001	/home/liamporter/github/MA5112/week1/C9-N3-R1_S9_L001_R1_001_fastqc.zip_trimmed_fastqc.zip

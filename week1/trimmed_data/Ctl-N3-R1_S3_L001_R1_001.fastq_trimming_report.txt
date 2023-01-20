@@ -1,0 +1,94 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: data/Ctl-N3-R1_S3_L001_R1_001.fastq
+Trimming mode: single-end
+Trim Galore version: 0.6.7
+Cutadapt version: 1.18
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Adapter sequence: 'TGGAATTCTCGGGTGCCAAGG' (user defined)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length before a sequence gets removed: 17 bp
+Maxiumum tolerated read length after trimming (for smallRNA trimming): 30 bp
+All Read 1 sequences will be trimmed by 4 bp from their 5' end to avoid poor qualities or biases
+All Read 1 sequences will be trimmed by 4 bp from their 3' end to avoid poor qualities or biases
+Output file will be GZIP compressed
+
+
+This is cutadapt 1.18 with Python 3.7.12
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a TGGAATTCTCGGGTGCCAAGG data/Ctl-N3-R1_S3_L001_R1_001.fastq
+Processing reads on 1 core in single-end mode ...
+Finished in 0.77 s (5 us/read; 10.98 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 141,703
+Reads with adapters:                    81,778 (57.7%)
+Reads written (passing filters):       141,703 (100.0%)
+
+Total basepairs processed:     5,101,308 bp
+Quality-trimmed:                   4,619 bp (0.1%)
+Total written (filtered):      4,665,197 bp (91.5%)
+
+=== Adapter 1 ===
+
+Sequence: TGGAATTCTCGGGTGCCAAGG; Type: regular 3'; Length: 21; Trimmed: 81778 times.
+
+No. of allowed errors:
+0-9 bp: 0; 10-19 bp: 1; 20-21 bp: 2
+
+Bases preceding removed adapters:
+  A: 11.7%
+  C: 50.1%
+  G: 23.5%
+  T: 14.7%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	27622	35425.8	0	27622
+2	8431	8856.4	0	8431
+3	2334	2214.1	0	2334
+4	3098	553.5	0	3098
+5	6113	138.4	0	6113
+6	18444	34.6	0	18444
+7	2897	8.6	0	2897
+8	790	2.2	0	790
+9	717	0.5	0	715 2
+10	1618	0.1	1	1592 26
+11	964	0.0	1	945 19
+12	738	0.0	1	716 22
+13	831	0.0	1	816 15
+14	824	0.0	1	803 21
+15	825	0.0	1	792 33
+16	819	0.0	1	796 23
+17	1196	0.0	1	1159 37
+18	277	0.0	1	264 13
+19	193	0.0	1	184 9
+20	129	0.0	2	124 4 1
+21	117	0.0	2	110 7
+22	73	0.0	2	67 6
+23	86	0.0	2	84 1 1
+24	93	0.0	2	90 3
+25	131	0.0	2	123 8
+26	313	0.0	2	304 9
+27	442	0.0	2	423 18 1
+28	1590	0.0	2	1528 59 3
+29	48	0.0	2	45 3
+30	12	0.0	2	10 2
+31	7	0.0	2	7
+32	2	0.0	2	2
+33	1	0.0	2	1
+34	1	0.0	2	1
+35	2	0.0	2	2
+
+
+RUN STATISTICS FOR INPUT FILE: data/Ctl-N3-R1_S3_L001_R1_001.fastq
+=============================================
+141703 sequences processed in total
+Sequences removed because they became shorter than the length cutoff of 17 bp:	8798 (6.2%)
+Sequences removed because after trimming they were longer than the maximum length cutoff of 30 bp:	0 (0.0%)
+
