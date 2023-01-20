@@ -1,0 +1,10 @@
+For file in data/*; do echo $file; done
+For file in data/*; do fastqc $file; -o fastqc; done
+
+for file in data/*; do trim_galore $file --adapter TGGAATTCTCGGGTGCCAAGG --length 17 --clip_r1 4 -three_prime_clip_r1 4 --max_length 30 --gzip; done
+
+for file in trimmed/*".gz"; do fastqc $file; -o fastqc_trimmed; done
+
+cd container/
+docker build -t rowansmith114/week1 .
+docker push -t rowansmith114/week1
