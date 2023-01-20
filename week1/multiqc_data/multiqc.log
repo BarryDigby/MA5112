@@ -1,0 +1,59 @@
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/localuser/anaconda3/envs/week1/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc_config.yaml
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/localuser/.multiqc_config.yaml
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  Command used: /home/localuser/anaconda3/envs/week1/bin/multiqc data/
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2023-01-16 13:20:14,124] multiqc                                            [INFO   ]  This is MultiQC v1.0.dev0
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  Command     : /home/localuser/anaconda3/envs/week1/bin/multiqc data/
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  Working dir : /home/localuser/github/MA5112/week1
+[2023-01-16 13:20:14,124] multiqc                                            [INFO   ]  Template    : default
+[2023-01-16 13:20:14,124] multiqc                                            [INFO   ]  Searching 'data/'
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc, clusterflow
+[2023-01-16 13:20:14,124] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpiPUOJT
+[2023-01-16 13:20:14,125] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Ctl-N1-R1_S1_L001_R1_001.fastq
+[2023-01-16 13:20:14,125] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C9-N1-R1_S7_L001_R1_001.fastq
+[2023-01-16 13:20:14,144] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C9-N2-R1_S8_L001_R1_001.fastq
+[2023-01-16 13:20:14,145] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C9-N3-R1_S9_L001_R1_001.fastq
+[2023-01-16 13:20:14,145] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Ctl-N3-R1_S3_L001_R1_001.fastq
+[2023-01-16 13:20:14,145] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Ctl-N2-R1_S2_L001_R1_001.fastq
+[2023-01-16 13:20:14,667] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2023-01-16 13:20:14,669] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,670] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,671] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2023-01-16 13:20:14,672] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,682] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('data/',)
+[2023-01-16 13:20:14,683] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,713] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,714] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,715] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('data/',)
+[2023-01-16 13:20:14,723] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('data/',)
+[2023-01-16 13:20:14,731] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,739] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,747] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,748] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,820] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,821] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('data/',)
+[2023-01-16 13:20:14,828] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('data/',)
+[2023-01-16 13:20:14,851] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,859] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,861] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,862] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('data/',)
+[2023-01-16 13:20:14,863] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('data/',)
+[2023-01-16 13:20:14,870] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,914] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2023-01-16 13:20:14,916] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,916] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,924] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,932] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,940] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,948] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('data/',)
+[2023-01-16 13:20:14,956] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('data/',)
+[2023-01-16 13:20:14,957] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:14,995] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 6 reports
+[2023-01-16 13:20:15,025] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('data/',)
+[2023-01-16 13:20:15,025] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2023-01-16 13:20:15,025] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2023-01-16 13:20:15,025] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpiPUOJT/multiqc_data/multiqc_general_stats.txt' to '/home/localuser/github/MA5112/week1/multiqc_data'
+[2023-01-16 13:20:15,026] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpiPUOJT/multiqc_data/multiqc_fastqc.txt' to '/home/localuser/github/MA5112/week1/multiqc_data'
+[2023-01-16 13:20:15,026] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpiPUOJT/multiqc_data/multiqc_sources.txt' to '/home/localuser/github/MA5112/week1/multiqc_data'
+[2023-01-16 13:20:15,056] multiqc                                            [INFO   ]  MultiQC complete
