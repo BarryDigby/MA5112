@@ -11,21 +11,21 @@ Following quality control assessment, install `TrimGalore!` to perform adapter t
 Make a clone of the GitHub repository `BarryDigby/MA5112` locally on your laptop:
 
 ```console
-git clone git@github.com:BarryDigby/MA5112.git
+git clone https://github.com/BarryDigby/MA5112.git
 ```
 
 Checkout a branch with the following naming convention: first character of your first name + surname. (e.g Barry Digby = bdigby )
 
 ```console
 cd MA5112/
-git checkout -b <your name>
-git push -u origin <your name>
+git checkout -b <your branch name>
+git push -u origin <your branch name>
 ```
 
 You will now have a copy of the `main` branch to work on for the tutorial. Each week, I will release new materials on the `main` branch. You can work on your own branch and incorporate these new additions using the following commands:
 
 ```console
-git pull origin/main
+git pull origin main
 ```
 
 This command essentially means "download the latest materials from the `main` branch to my branch". You will get the following error the first time you run this:
@@ -103,7 +103,7 @@ Perform adapter trimming on the raw sequencing data using `trim_galore`. To appl
 
 - `--clip_r1 4`: Remove the first 4 bases from the 5 prime end of R1.
 
-- `-three_prime_clip_r1 4`: Remove the last 4 bases from the 3 prime end of R1.
+- `--three_prime_clip_r1 4`: Remove the last 4 bases from the 3 prime end of R1.
 
 - `--max_length 30`: Reject reads greater then length 30 after applying trimming.
 
@@ -164,8 +164,8 @@ If you havent already, under `week1`, create a directory called `container`. Mov
 
 ```console
 cd container/
-docker build $username/week1 .
-docker push -t $username/week1
+docker build -t $username/week1 .
+docker push $username/week1
 ```
 
 The container is now pushed to your Dockerhub account. You can pull the container from any computer with docker using `docker pull $username/week1`.
@@ -207,3 +207,57 @@ You can now view all tutorial files: `ls -la files/`. Make sure your bash script
 ***
 
 Good luck
+
+# Solution
+
+Copy and save the bash script below as `week1_script.sh`:
+
+```bash
+#!/usr/bin/env bash 
+
+# set path to analysis files
+DATA=$1
+
+# 1. Perform QC on raw data
+
+mkdir -p quality_control
+mkdir -p quality_control/raw
+
+for file in ${DATA}/*; do
+    fastqc $file \
+        --outdir quality_control/raw
+done
+
+multiqc quality_control/raw -n raw_reads -o quality_control
+
+# 2. Trim and QC
+
+mkdir -p quality_control/trimmed
+
+for file in ${DATA}/*; do
+
+    trim_galore \
+        --adapter TGGAATTCTCGGGTGCCAAGG \
+        --length 17 \
+        --clip_r1 4 \
+        --three_prime_clip_r1 4 \
+        --max_length 30 \
+        --gzip \
+        --fastqc \
+        --fastqc_args "--outdir quality_control/trimmed" \
+        --outdir quality_control/trimmed \
+        $file
+
+done
+
+multiqc quality_control/trimmed -n trimmed_reads -o quality_control
+```
+
+Shell into your docker container interactively (change to your username). We need to mount the files to the container using `-v`:
+
+```bash
+cd MA5112/week1
+docker run -it -v $(pwd):/files/ barryd237/week1
+cd files/
+bash week1_script.sh /files/data
+```
