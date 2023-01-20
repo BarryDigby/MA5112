@@ -1,0 +1,74 @@
+[2023-01-13 15:47:07,593] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/genomicsmsc/miniconda3/envs/week1/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc_config.yaml
+[2023-01-13 15:47:07,593] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/genomicsmsc/.multiqc_config.yaml
+[2023-01-13 15:47:07,593] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-01-13 15:47:07,593] multiqc                                            [DEBUG  ]  Command used: /home/genomicsmsc/miniconda3/envs/week1/bin/multiqc .
+[2023-01-13 15:47:07,593] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2023-01-13 15:47:07,593] multiqc                                            [INFO   ]  This is MultiQC v1.0.dev0
+[2023-01-13 15:47:07,594] multiqc                                            [DEBUG  ]  Command     : /home/genomicsmsc/miniconda3/envs/week1/bin/multiqc .
+[2023-01-13 15:47:07,594] multiqc                                            [DEBUG  ]  Working dir : /home/genomicsmsc/MA5112/week1/trim_reads
+[2023-01-13 15:47:07,594] multiqc                                            [INFO   ]  Template    : default
+[2023-01-13 15:47:07,594] multiqc                                            [INFO   ]  Searching '.'
+[2023-01-13 15:47:07,594] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc, clusterflow
+[2023-01-13 15:47:07,594] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmp1_6D9z
+[2023-01-13 15:47:07,599] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Ctl-N3-R1_S3_L001_R1_001_trimmed.fq.gz
+[2023-01-13 15:47:07,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C9-N3-R1_S9_L001_R1_001_trimmed.fq.gz
+[2023-01-13 15:47:07,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C9-N1-R1_S7_L001_R1_001_trimmed.fq.gz
+[2023-01-13 15:47:07,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Ctl-N1-R1_S1_L001_R1_001_trimmed.fq.gz
+[2023-01-13 15:47:07,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: Ctl-N2-R1_S2_L001_R1_001_trimmed.fq.gz
+[2023-01-13 15:47:07,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: C9-N2-R1_S8_L001_R1_001_trimmed.fq.gz
+[2023-01-13 15:47:07,600] multiqc                                            [DEBUG  ]  Ignoring file as matched an ignore pattern: multiqc_report.html_trimmed.fq.gz
+[2023-01-13 15:47:07,801] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2023-01-13 15:47:07,805] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,807] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,809] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2023-01-13 15:47:07,814] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,837] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('.',)
+[2023-01-13 15:47:07,839] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,916] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,919] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,922] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('.',)
+[2023-01-13 15:47:07,941] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('.',)
+[2023-01-13 15:47:07,961] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:07,981] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,001] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,003] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,185] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,187] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('.',)
+[2023-01-13 15:47:08,206] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('.',)
+[2023-01-13 15:47:08,263] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,282] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,288] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,290] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('.',)
+[2023-01-13 15:47:08,293] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('.',)
+[2023-01-13 15:47:08,313] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,420] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2023-01-13 15:47:08,423] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,426] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,445] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,464] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,489] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 6 reports
+[2023-01-13 15:47:08,510] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('.',)
+[2023-01-13 15:47:08,531] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('.',)
+[2023-01-13 15:47:08,534] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,606] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 7 reports
+[2023-01-13 15:47:08,615] multiqc                                            [ERROR  ]  Oops! The 'fastqc' MultiQC module broke... 
+                    Please copy the following traceback and report it at https://github.com/ewels/MultiQC/issues 
+                    (if possible, include a log file that triggers the error) 
+============================================================
+Module fastqc raised an exception: Traceback (most recent call last):
+  File "/home/genomicsmsc/miniconda3/envs/week1/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/EGG-INFO/scripts/multiqc", line 346, in multiqc
+    output = mod()
+  File "/home/genomicsmsc/miniconda3/envs/week1/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc/modules/fastqc/fastqc.py", line 91, in __init__
+    self.fastqc_general_stats()
+  File "/home/genomicsmsc/miniconda3/envs/week1/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc/modules/fastqc/fastqc.py", line 200, in fastqc_general_stats
+    'avg_sequence_length': bs['avg_sequence_length'],
+KeyError: 'avg_sequence_length'
+============================================================
+[2023-01-13 15:47:08,618] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('.',)
+[2023-01-13 15:47:08,619] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2023-01-13 15:47:08,620] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2023-01-13 15:47:08,620] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp1_6D9z/multiqc_data/multiqc_cutadapt.txt' to '/home/genomicsmsc/MA5112/week1/trim_reads/multiqc_data'
+[2023-01-13 15:47:08,620] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp1_6D9z/multiqc_data/multiqc_sources.txt' to '/home/genomicsmsc/MA5112/week1/trim_reads/multiqc_data'
+[2023-01-13 15:47:08,620] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp1_6D9z/multiqc_data/multiqc_general_stats.txt' to '/home/genomicsmsc/MA5112/week1/trim_reads/multiqc_data'
+[2023-01-13 15:47:08,620] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmp1_6D9z/multiqc_data/multiqc_fastqc.txt' to '/home/genomicsmsc/MA5112/week1/trim_reads/multiqc_data'
+[2023-01-13 15:47:08,687] multiqc                                            [INFO   ]  MultiQC complete
