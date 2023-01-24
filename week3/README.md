@@ -1,30 +1,39 @@
 # ChIP-Seq
 
-## Download files
+Training materials generously provided by galaxy project.. 
 
-In the interest of time, BAM files have been prepared for you.
+![chip](../docs/images/chip-seq.png)
 
-Each entry in the `files.txt` file contains the URL for an analysis BAM file. Loop over the contents of the file, applying the `wget` command to download them to your working directory.
+## Analysis BAM files
 
-## Concatenate replicates
+In the interest of time, BAM files have been prepared for you by aligning paired-end DNA sequencing reads to the reference genome.
 
-In the interest of time for the tutorial, we will merge the replicates using `samtools merge`.
+* Create a directory `bams/` to store the BAM files.
 
-Make a directory for the merged bam files to keep your analyis organsied. Once oyu are happy the merge was successful, index the files and delete the original replicates. 
+* Each entry in the `files.txt` file contains the URL for an analysis BAM file. Loop over the contents of the file, applying the `wget` command to download them to your working directory. (_hint: use a while loop_).
 
-## Index BAM files
+***
 
-Apply `samtools index` to each of the downloaded BAM files. link to [folooofof](#concatenate-replicates)
+Recall last week we used `samtools` to view the header of the BAM files.
 
-## Quality Control (ChIP-Seq)
+1. What tool was used to align reads to the reference genome?
 
-Recall that ChIP-Seq experiments require a background control sample which is called the 'input' sample - one that has been cross-linked and sonicated **but not immuno-precipitated**.
+2. What processing was performed on the BAM file?
 
-We expect our input sample to have a flat distribution across the sequenced genome whilst immuno-precipitated proteins of interest will have pileups of reads in the regions they were bound to DNA.
+***
 
-> This is analogous to RNA-Seq which we will cover next week. Instead of counting reads that span a transcript, ChIP-Seq involves counting reads that span a region.
+* Merge the BAM replicates using `samtools merge`.
 
-Make a directory `deeptools` to store the output files from QC.
+* Index the files (`samtools index`) and delete the original replicate BAM files.
+
+
+## Quality Control
+
+Recall that ChIP-Seq experiments require a background control sample - the 'input' sample - one that has been cross-linked and sonicated **but not immuno-precipitated**.
+
+We expect our input sample to have a flat distribution across the sequenced genome whilst immuno-precipitated proteins of interest will have pileups - 'peaks' - of reads in the regions in which they were bound to DNA.
+
+* Make a directory `deeptools/qc` to store the output files from QC.
 
 ### Sample Heterogeneity
 
@@ -32,11 +41,11 @@ We will assess sample heterogeneity by computing the correlation of read counts 
 
 > This is analogous to RNA-Seq which we will cover next week. Instead of counting reads that span a transcript, ChIP-Seq involves counting reads that span a region.
 
-We expect that the replicates of the ChIP-seq experiments should be clustered more closely to each other than the replicates of the input sample. That is, because the input samples should not have enriched regions included - remember the immuno-precipitation step was skiped during the sample preparation.
+We expect that the replicates of the ChIP-seq experiments should be clustered more closely to each other than the replicates of the input sample.
 
-#### multiBamSummary
+### multiBamSummary
 
-This step takes a few minutes to run.
+Compare the number of reads spanning a pre-defined bin range (`--binSize`) between samples. We can reduce the computational load by sampling reads in 1Kb bins every 500bp intervals (`--distanceBetweenBins`).
 
 ```console
 multiBamSummary bins \
@@ -47,9 +56,11 @@ multiBamSummary bins \
     --bamfiles bams/wt_CTCF.bam bams/wt_H3K27me3.bam bams/wt_H3K4me3.bam bams/wt_input.bam
 ```
 
-The output file is compressed.
+The output file is compressed, we cannot view it using unix tools. 
 
-#### PlotCorrelation
+### PlotCorrelation
+
+Plot a sample-sample heatmap using the `plotCorrelation` tool:
 
 ```console
 plotCorrelation \
@@ -59,22 +70,13 @@ plotCorrelation \
     -o deeptools/multisummary_pearson.pdf
 ```
 
-Take note of the output from the terminal and apply the suggested changes.
+* Take note of the output from the terminal and apply the suggested changes to a new pdf file.
 
-> `--removeOutliers`: If set, bins with very large counts are removed. Bins with abnormally high reads counts artificially increase pearson correlation; that’s why, multiBamSummary tries to remove outliers using the median absolute deviation (MAD) method applying a threshold of 200 to only consider extremely large deviations from the median.
+***
 
-Think for a second why `--removeoutliers` only applied to Pearson correlation and not spearman correlation. 
+1. Why are the suggested changes important when using `--corMethod pearson` ?
+2. 
 
-```console
-plotCorrelation \
-    -in deeptools/multisummary.matrix \
-    --whatToPlot heatmap \
-    --corMethod pearson \
-    -o deeptools/multisummary_pearson.pdf \
-    --removeOutliers \
-    --outFileCorMatrix deeptools/multisummary_pearson.txt \
-    --plotNumbers
-```
 
 #### plotPCA 
 
@@ -137,7 +139,7 @@ macs yo
 
 make macs2 directory
 
-macs2 callpeak -t bams/wt_H3K4me3.bam -c bams/wt_input.bam -f BAMPE -g mm -n H3K4me_experiment --outdir macs2/
+macs2 callpeak -t bams/wt_H3K4me3.bam -c bams/wt_input.bam -f BAMPE -g mm -n H3K4me3_experiment --outdir macs2/
 
 
 ## plotting vs two samples
@@ -154,4 +156,4 @@ cat macs2/H3K4me_experiment_summits.bed macs2/CTCF_experiment_summits.bed | awk 
 
 use two vs bigwig files from bamcompare
 
-computeMatrix reference-point --regionsFileName H3K4me_CTCF_merged.bed --scoreFileName deeptools/H3K4me_vs_input.bigwig deeptools/CTCF_vs_input.bigwig --upstream 3000 --downstream 3000 --referencePoint center --outFileName H3K4me_CTCF.matrix
+computeMatrix reference-point --regionsFileName H3K4me3_CTCF_merged.bed --scoreFileName deeptools/H3K4me3_vs_input.bigwig deeptools/CTCF_vs_input.bigwig --upstream 3000 --downstream 3000 --referencePoint center --outFileName H3K4me3_CTCF.matrix
