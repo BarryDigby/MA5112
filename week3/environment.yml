@@ -1,0 +1,9 @@
+name: week3
+channels:
+ - bioconda
+dependencies:
+ - deeptools==3.5.1
+ - bedtools
+ - macs2
+ - samtools
+ - igv
