@@ -170,6 +170,17 @@ gatk --java-options -Xmx1g \
      --known-sites dbsnp_138.hg38.vcf.gz
 ```
 
+```console
+gatk --java-options -Xmx1g \
+     BaseRecalibrator \
+     -I HCC1395N.mkdup.bam \
+     -O HCC1395N.chr21_25689498-46709983.recal.table \
+     -L chr21_25689498-46709983.bed.gz \
+     -R genome.fasta \
+     --known-sites mills_and_1000G.indels.hg38.vcf.gz \
+     --known-sites dbsnp_138.hg38.vcf.gz
+```
+
 Run the same analysis again, using the second arm of chr21. You will need to adjust the `-O` and `-L` flags accordingly.
 
 You should have two files when you are finished: `HCC1395N.chr21_2-23354000.recal.table` & `HCC1395N.chr21_25689498-46709983.recal.table`.
@@ -190,6 +201,16 @@ gatk --java-options -Xmx1g \
 
 :exclamation: Apply the above to the other arm in chromosome 21.
 
+```console
+gatk --java-options -Xmx1g \
+     ApplyBQSR \
+     -I HCC1395N.mkdup.bam \
+     -O HCC1395N.chr21_25689498-46709983.recal.bam \
+     -L chr21_25689498-46709983.bed.gz \
+     -R genome.fasta \
+     --bqsr-recal-file HCC1395N.chr21_25689498-46709983.recal.table
+```
+
 ## Haplotype Caller
 
 Call germline variants using `HaplotypeCaller`
@@ -205,6 +226,16 @@ gatk --java-options -Xmx2g \
 ```
 
 :exclamation: as before, carry out the same for the second arm of chr21.
+
+```console
+gatk --java-options -Xmx2g \
+    HaplotypeCaller \
+    -I HCC1395N.chr21_25689498-46709983.recal.bam \
+    -O HCC1395N.haplotypecaller.chr21_25689498-46709983.vcf.gz \
+    -R genome.fasta \
+    -D dbsnp_138.hg38.vcf.gz \
+     -L chr21_25689498-46709983.bed.gz 
+```
 
 ## Combine VCFs
 
