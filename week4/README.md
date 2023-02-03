@@ -38,9 +38,11 @@ Place these in a shell script and ensure it runs correctly before moving to the 
 
 ### Cluster
 
-The RNA-Seq dataset derived from cell lines is available on lugh. Log on using the masters student account:
+The RNA-Seq dataset derived from cell lines is available on lugh. Log on using your account or the masters student account:
 
 ```bash
+shh yourname@lugh.nuigalway.ie
+or
 ssh mscstudent@lugh.nuigalway.ie
 ```
 
