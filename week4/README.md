@@ -76,9 +76,11 @@ The main difference between your local script and script on lugh are the SLURM h
 ```console
 #!/bin/sh
 
-#SBATCH --job-name="Kallisto"
-#SBATCH --output=Kallisto_%A.out
+#SBATCH --job-name="Kallisto" #job name - recommend putting your intials at the start
+#SBATCH --output=Kallisto_%A.out # log file
 #SBATCH --partition MSC   # Queue name 
 ```
 
 Submit the script to the SLURM scheduler by running `sbatch <scriptname>.sh`
+
+Check if your script was properly submitted: `squeue` (look for your initials + Kallisto)
