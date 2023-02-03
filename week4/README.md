@@ -2,11 +2,11 @@
 
 ![rna](../docs/images/rnaseq-data.png)
 
-A researcher has captured exosomes from human malignant melanoma cell line (A375) and the human lung cancer cell line (A549) and added them to primary human epidermal melanocytes, (NHEM-c cells). There are triplicates of each cell line:
+A researcher has captured exosomes from human malignant melanoma cell line (A375) and the human lung cancer cell line (A549) and added them to primary human epidermal melanocytes (NHEM-c cells). There are triplicates of each cell line:
 
-NHEM-c (Control)
-NHEM-c + A549 exosomes (Lung)
-NHEM-c + A375 exosomes (Melanoma)
+- NHEM-c (Control)
+- NHEM-c + A549 exosomes (Lung)
+- NHEM-c + A375 exosomes (Melanoma)
 
 The researcher is interested in characterising the transcriptional profile of each transfected cell line, in an effort to elucidate the tumor pathways mediated by A375 & A549 tumor exosomes.
 
@@ -24,6 +24,8 @@ The `kalliso` executable has been provided for you in the week4 github repositor
 export PATH=$PATH:/data/github/MA5112/week4/
 ```
 
+> Please update the above to reflect the directory where you have cloned the repository
+
 ### Dev testing
 
 Develop scripts locally using small test datasets (fail fast) before deploying them on full size datasets. In the `toy_data` folder there are paired-end reads and a reference transcriptome for testing. You are tasked with writing a script to:
@@ -36,7 +38,7 @@ Place these in a shell script and ensure it runs correctly before moving to the 
 
 ### Cluster
 
-The RNA-Seq dataset derived from cell lines is available on lugh. Log on using the masters student account (or your own account if you have one):
+The RNA-Seq dataset derived from cell lines is available on lugh. Log on using the masters student account:
 
 ```bash
 ssh mscstudent@lugh.nuigalway.ie
@@ -78,3 +80,5 @@ The main difference between your local script and script on lugh are the SLURM h
 #SBATCH --output=Kallisto_%A.out
 #SBATCH --partition MSC   # Queue name 
 ```
+
+Submit the script to the SLURM scheduler by running `sbatch <scriptname>.sh`
