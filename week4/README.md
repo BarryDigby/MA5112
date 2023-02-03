@@ -62,7 +62,7 @@ Navigate to your class directory:
 cd /data/MSc/2023/
 ```
 
-Please create a directory for yourself. The data is available at `/data/MSc/2023/rna_seq_dataset`. Similarly to your local script, use `kallisto index` to index the `Homo_sapiens.GRCh38.cdna.all.fa` file. Next, use `kallisto quant` to align each of the reads to the reference. In addition to the input FASTQ file , output directory and the reference index file, you will need to specify the following flags:
+Please create a directory for yourself. The data is available at `/data/MSc/2023/rna_seq_dataset`. Similarly to your local script, use `kallisto index` to index the `Homo_sapiens.GRCh38.cdna.all.fa` file. Next, use `kallisto quant` to align each of the reads to the reference (take care not to corrupt the data for your classmates). In addition to the input FASTQ file , output directory and the reference index file, you will need to specify the following flags:
 
 - `--single`: Indicate input is single-end reads (requires -l and -s)
 - `-t 2`: threads to use
