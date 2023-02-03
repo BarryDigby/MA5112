@@ -1,0 +1,13 @@
+Module	Section	Sample Name	Source
+Cutadapt	all_sections	C9-N3-R1_S9_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/C9-N3-R1_S9_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	C9-N1-R1_S7_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/C9-N1-R1_S7_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	Ctl-N1-R1_S1_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/Ctl-N1-R1_S1_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	Ctl-N2-R1_S2_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/Ctl-N2-R1_S2_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	Ctl-N3-R1_S3_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/Ctl-N3-R1_S3_L001_R1_001.fastq_trimming_report.txt
+Cutadapt	all_sections	C9-N2-R1_S8_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/C9-N2-R1_S8_L001_R1_001.fastq_trimming_report.txt
+FastQC	all_sections	Ctl-N2-R1_S2_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/Ctl-N2-R1_S2_L001_R1_001_trimmed_fastqc.zip
+FastQC	all_sections	Ctl-N3-R1_S3_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/Ctl-N3-R1_S3_L001_R1_001_trimmed_fastqc.zip
+FastQC	all_sections	Ctl-N1-R1_S1_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/Ctl-N1-R1_S1_L001_R1_001_trimmed_fastqc.zip
+FastQC	all_sections	C9-N3-R1_S9_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/C9-N3-R1_S9_L001_R1_001_trimmed_fastqc.zip
+FastQC	all_sections	C9-N2-R1_S8_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/C9-N2-R1_S8_L001_R1_001_trimmed_fastqc.zip
+FastQC	all_sections	C9-N1-R1_S7_L001_R1_001	/home/lukec/Documents/MA5112/week1/trimmed_sequences/C9-N1-R1_S7_L001_R1_001_trimmed_fastqc.zip

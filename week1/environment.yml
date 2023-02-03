@@ -1,0 +1,8 @@
+name: week1
+channels:
+  - bioconda
+dependencies:
+  - fastqc
+  - multiqc
+  - trim-galore
+
