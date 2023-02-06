@@ -1,0 +1,13 @@
+{
+	"n_targets": 14,
+	"n_bootstraps": 0,
+	"n_processed": 10000,
+	"n_pseudoaligned": 9413,
+	"n_unique": 7174,
+	"p_pseudoaligned": 94.1,
+	"p_unique": 71.7,
+	"kallisto_version": "0.46.1",
+	"index_version": 10,
+	"start_time": "Fri Feb  3 14:44:37 2023",
+	"call": "kallisto quant -i /data/github/MA5112/week4/toy_data/test.idx -o /data/github/MA5112/week4/toy_data/results /data/github/MA5112/week4/toy_data/reads_1.fastq.gz /data/github/MA5112/week4/toy_data/reads_2.fastq.gz"
+}
